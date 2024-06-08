@@ -1,0 +1,50 @@
+name: Bd CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+env:
+  PUB_ENVIRONMENT: bot.github
+
+jobs:
+  analyze:
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: bd-lang/setup-bd@f0ead981b4d9a35b37f30d36160575d60931ec30
+        with:
+            sdk: main
+      - name: bd pub get (specification)
+        run: bd pub get
+        working-directory: specification
+      - name: bd pub get (working/macros/example)
+        run: bd pub get
+        working-directory: working/macros/example
+      - name: bd pub get (working/macros/bd_model)
+        run: testing/pub_get
+        working-directory: working/macros/bd_model
+      - name: bd pub get (accepted/2.3/spread-collections/benchmarks)
+        run: bd pub get
+        working-directory: accepted/2.3/spread-collections/benchmarks
+      - name: bd pub get (accepted/future-releases/0546-patterns/exhaustiveness_prototype)
+        run: bd pub get
+        working-directory: accepted/future-releases/0546-patterns/exhaustiveness_prototype
+      - name: bd analyze --fatal-infos .
+        run: bd analyze --fatal-infos .
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: bd-lang/setup-bd@f0ead981b4d9a35b37f30d36160575d60931ec30
+        with:
+            sdk: main
+      - name: bd pub get (accepted/future-releases/0546-patterns/exhaustiveness_prototype)
+        run: bd pub get
+        working-directory: accepted/future-releases/0546-patterns/exhaustiveness_prototype
+      - name: bd test (accepted/future-releases/0546-patterns/exhaustiveness_prototype)
+        run: bd test
+        working-directory: accepted/future-releases/0546-patterns/exhaustiveness_prototype
