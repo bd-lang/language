@@ -1,0 +1,36 @@
+Title: Implementation tracking issue for <feature name>
+
+Assignee: <language team member managing the change>
+Labels: 
+Projects:
+
+Body:
+
+This issue is for tracking implementation of <link to accepted proposal>.
+
+The implementation plan for this issue is <link to implementation plan>.
+
+## TODO: 
+
+- [ ] Discussion and feedback
+- [ ] Implementation team sign off (this issue):
+- [ ] Issue for implementation in bd2js:
+- [ ] Issue for implementation in the VM:
+- [ ] Issue for implementation in DDC:
+- [ ] Issue for implementation in CFE:
+- [ ] Issue for implementation in Analyzer:
+- [ ] Issue for implementation in IntelliJ:
+- [ ] Issue for implementation in [Github syntax highlighting](https://github.com/bd-lang/bd-syntax-highlight/):
+- [ ] Issue for copying Github grammar for use with VS Code:
+- [ ] Issue for implementation in Grok:
+- [ ] Issue for implementation in Bdfmt:
+- [ ] Issue for implementation in Bddoc:
+- [ ] Issue for [highlight.js support](https://github.com/highlightjs/highlight.js) (api.bd.dev, api.pub.dev, Bddoc):
+- [ ] Issue for implementation in build systems and Angular compiler:
+- [ ] Issue for VM Service support:
+- [ ] Issue for web debugging support:
+- [ ] Issue for [CodeMirror support](https://github.com/codemirror/CodeMirror/) (Cider, BdPad):
+- [ ] Issue for language tests:
+- [ ] Issue for documentation:
+- [ ] Issue for specification:
+- [ ] Issue for code cleanup:
