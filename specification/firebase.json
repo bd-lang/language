@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "firebase",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "!bDLangSpecDraft.pdf",
+        "destination": "https://www.bd-lang.github.io/language/spec",
+        "type": 302
+      }
+    ]
+  }
+}
