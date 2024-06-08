@@ -1,0 +1,12 @@
+bdLangSpec*.aux
+bdLangSpec*.idx
+bdLangSpec*.ilg
+bdLangSpec*.ind
+bdLangSpec*.log
+bdLangSpec*.out
+bdLangSpec*.pdf
+bdLangSpec*.toc
+*-hash.tex
+*-list.txt
+.bd_tool/
+.packages
